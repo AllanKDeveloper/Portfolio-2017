@@ -1,0 +1,46 @@
+<div class="block-content">
+    <div class="project-head">
+        <h1 class="block-title">Parallax</h1>
+        <div class="tags"><span>Category : </span> HTML & CSS</div>
+    </div>
+    <p class="project-description">A parallax project for all people. https://github.com/AllanKDeveloper/simpleparallax/</p>
+    <div class="project-media row">
+        <div class="col-md-6">
+            <img src="images/portfolio/parallax/001.jpg" alt="Parallax Image 01" />
+        </div>
+        <div class="col-md-6">
+            <img src="images/portfolio/parallax/002.jpg" alt="Parallax Image 02" />
+        </div>
+    </div>
+    <div class="project-nav text-center">
+        <span class="float-left">
+            <a class="open-project" href="project-1.html">&leftarrow; Previous Project</a>
+        </span>
+        <span class="">
+            <a id="close-project" href="#"><i class="ion-grid"></i></a>
+        </span>
+        <span class="float-right">
+            <a class="open-project" href="project-3.html">Next Project &rightarrow; </a>
+        </span>
+    </div>
+</div>
+<div class="row text-center">
+    <div class="col-md-12 btn-email">
+        <a class="btn lowercase">allankehl@hotmail.com</a>
+    </div>
+</div>
+
+<script>
+    $('.open-project').on('click', function() {
+        var projectUrl = $(this).attr("href");
+        $('.inline-menu-container').removeClass('showx');
+        $('.content-blocks.pop').addClass('showx');
+        $('.content-blocks.pop section').load(projectUrl)
+        return false;
+    });
+    $('#close-project').on('click', function() {
+        $('.content-blocks.pop').removeClass('showx');
+        $('.inline-menu-container').addClass('showx');
+        $('.content-blocks.pop section').empty();
+    });
+</script>

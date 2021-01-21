@@ -1,0 +1,48 @@
+<div class="block-content">
+    <div class="project-head">
+        <h1 class="block-title">Site TitansWi-Fi</h1>
+        <div class="tags"><span>Category : </span> HTML & CSS</div>
+        <div class="tags"><span>Client : </span> Plenatech</div>
+    </div>
+    <p class="project-description">TitansWi-Fi [https://titanswi-fi.com.br]</p>
+    <div class="project-media row">
+        <div class="col-md-6">
+            <img src="images/portfolio/titans/001.jpg" alt="titans Image 01" />
+        </div>
+        <div class="col-md-6">
+            <img src="images/portfolio/titans/002.jpg" alt="titans Image 02" />
+            <img src="images/portfolio/titans/003.jpg" alt="titans Image 03" />
+        </div>
+    </div>
+    <div class="project-nav text-center">
+        <span class="float-left">
+            <a class="open-project" href="project-3.html">&leftarrow; Previous Project</a>
+        </span>
+        <span class="">
+            <a id="close-project" href="#"><i class="ion-grid"></i></a>
+        </span>
+        <span class="float-right">
+            <a class="open-project" href="project-2.html">Next Project &rightarrow; </a>
+        </span>
+    </div>
+</div>
+<div class="row text-center">
+    <div class="col-md-12 btn-email">
+        <a class="btn lowercase">allankehl@hotmail.com</a>
+    </div>
+</div>
+
+<script>
+    $('.open-project').on('click', function() {
+        var projectUrl = $(this).attr("href");
+        $('.inline-menu-container').removeClass('showx');
+        $('.content-blocks.pop').addClass('showx');
+        $('.content-blocks.pop section').load(projectUrl)
+        return false;
+    });
+    $('#close-project').on('click', function() {
+        $('.content-blocks.pop').removeClass('showx');
+        $('.inline-menu-container').addClass('showx');
+        $('.content-blocks.pop section').empty();
+    });
+</script>
